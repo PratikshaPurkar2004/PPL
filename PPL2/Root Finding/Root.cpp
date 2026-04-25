@@ -57,7 +57,6 @@ void Root::solveRoot()
         cout<<real<<" + "<<imag<<"i , ";
         cout<<real<<" - "<<imag<<"i\n";
 
-        // clean output when real = 0
         if(real == 0)
         {
             cout<<"(x + "<<imag<<"i)(x - "<<imag<<"i)";

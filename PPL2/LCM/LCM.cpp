@@ -4,11 +4,19 @@ using namespace std;
 
 int LCM::gcd(int a,int b)
 {
+    // if(a<0 || b<0)
+    // {
+    //     cout<<"Negative numbers are not allowed."<<endl;
+    //     return -1;
+    // }
     while(b!=0)
     {
-        int t=b;
-        b=a%b;
-        a=t;
+        // int t=b;
+        // b=a%b;
+        // a=t;
+        int r=a%b;
+        a=b;
+        b=r;
     }
     return a;
 }
