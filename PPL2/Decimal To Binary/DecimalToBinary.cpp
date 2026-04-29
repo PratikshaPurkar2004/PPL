@@ -1,12 +1,19 @@
 #include <iostream>
 using namespace std;
+#include "DecimalToBinary.h"
 
-int main() {
-    int n, binary = 0, place = 1;
-
+DecimalToBinary::DecimalToBinary(int n)
+{
+    this->n=n;
+}
+void DecimalToBinary::input()
+{
     cout << "Enter decimal number: ";
     cin >> n;
+}
 
+void DecimalToBinary::solve()
+{
     while (n != 0) {
         int rem = n % 2;
         binary += rem * place;
@@ -15,5 +22,4 @@ int main() {
     }
 
     cout << "Binary: " << binary;
-    return 0;
 }
