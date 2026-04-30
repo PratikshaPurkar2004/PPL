@@ -1,20 +1,26 @@
 #include <iostream>
 using namespace std;
+#include "DecimalToOctal.h"
 
-int main() {
-    int decimal, octal = 0, place = 1, remainder;
+DecimalToOctal::DecimalToOctal(int n)
+{
+    decimal=n;
+}
 
+void DecimalToOctal::input()
+{
     cout << "Enter a decimal number: ";
     cin >> decimal;
+}
 
-    while (decimal != 0) {
+void DecimalToOctal::solve()
+{
+    while (decimal != 0) 
+    {
         remainder = decimal % 8;
         octal += remainder * place;
         decimal /= 8;
         place *= 10;
     }
-
     cout << "Octal number: " << octal;
-
-    return 0;
 }
