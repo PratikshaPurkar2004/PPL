@@ -4,22 +4,22 @@ using namespace std;
 class Factorial
 {
     private:
-        int n;
+        int num;
     public:
     int input()
     {
         cout<<"Enter an integer::";
-        cin>>n;
+        cin>>num;
     }
-    int fact(int n)
+    int fact(int num)
     {
-        if(n==0)
+        if(num==0)
             return 1;
-        return n*fact(n-1);
+        return num*fact(num-1);
     }
     void display()
     {
-        cout<<"Factorial="<<fact(n);
+        cout<<"Factorial="<<fact(num);
     }
 };
 
