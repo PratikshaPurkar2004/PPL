@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-    int arr[] = {1,2,3,4,5,6,7,8,9};
-    int key = 7;
+    int arr[] = {12,93,45,78,56,34,23,89,67};
+    int key = 67;
 
     int low = 0, high = 8;
 
