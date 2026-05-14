@@ -1,28 +1,44 @@
 #include <iostream>
+#include "Binary.h"
+
 using namespace std;
 
-int main() {
-    int arr[] = {12,93,45,78,56,34,23,89,67};
-    int key = 67;
+Binary::Binary()
+{
+    int temp[9] = {12,23,34,45,56,67,78,89,93};
 
+    for(int i = 0; i < 9; i++)
+    {
+        arr[i] = temp[i];
+    }
+
+    key = 67;
+}
+
+void Binary::search()
+{
     int low = 0, high = 8;
 
-    while(low <= high) {
+    while(low <= high)
+    {
         int mid = (low + high) / 2;
 
-        if(arr[mid] == key) {
-            cout << "Found at " << mid;
-            return 0;
+        if(arr[mid] == key)
+        {
+            cout << "Found at index " << mid;
+            return;
         }
 
         else if(arr[mid] < key)
+        {
             low = mid + 1;
+        }
 
         else
+        {
             high = mid - 1;
+        }
     }
 
     cout << "Not Found";
-
-    return 0;
-} 
+}
