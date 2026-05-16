@@ -7,7 +7,7 @@ void Lagrange ::input()
     cout<<"Enter number of point::";
     cin>>n;
     if(n<=0 ||n>10)
-        throw "invalid ponts!";
+        throw "invalid points!";
     for(int i=0;i<n;i++)
     {
         cout<<"Enter x[" <<i <<"] and y[" <<i <<"]: ";
