@@ -20,8 +20,8 @@ int main()
         {
             if(arr[i]+arr[j]==target)
             {
-                // ans.push_back(i);
-                // ans.push_back(j);
+                ans.push_back(i);
+                ans.push_back(j);
                 cout<<i  <<" " <<j;
             }
         }
