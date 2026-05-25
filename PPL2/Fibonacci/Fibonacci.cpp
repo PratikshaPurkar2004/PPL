@@ -4,7 +4,7 @@ using namespace std;
 class Fibonacci
 {
     private:
-        int a=0,b=1,c,n;
+        int x=0,y=1,c,n;
     public:
         void input()
         {
@@ -15,10 +15,10 @@ class Fibonacci
         {
             for(int i=0;i<n;i++)
             {
-                c=a+b;
-                a=b;
-                b=c;
-                cout<<a <<" ";
+                c=x+y;
+                x=y;
+                y=c;
+                cout<<x <<" ";
             }
         }
 };
