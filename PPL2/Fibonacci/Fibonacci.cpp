@@ -1,32 +1,22 @@
 #include<iostream>
 using namespace std;
+#include "Fibonacci.h"
 
-class Fibonacci
-{
-    private:
-        int x=0,y=1,c,n;
-    public:
-        void input()
-        {
-            cout<<"Enter a number::";
-            cin>>n;
-        }
-        void fibonacci()
-        {
-            for(int i=0;i<n;i++)
-            {
-                c=x+y;
-                x=y;
-                y=c;
-                cout<<x <<" ";
-            }
-        }
-};
 
-int main()
+void Fibonacci::input()
 {
-    Fibonacci f;
-    f.input();
-    f.fibonacci();
-    return 0;
+    cout<<"Enter a number::";
+    cin>>n;
 }
+void Fibonacci::fibonacci()
+{
+    for(int i=0;i<n;i++)
+    {
+        c=x+y;
+        x=y;
+        y=c;
+        cout<<x <<" ";
+    }
+}
+
+
