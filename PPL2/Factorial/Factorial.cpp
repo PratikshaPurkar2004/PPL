@@ -1,32 +1,24 @@
 #include<iostream>
 using namespace std;
-
-class Factorial
+#include "Factorial.h"
+    
+int Factorial::input()
 {
-    private:
-        int num;
-    public:
-    int input()
-    {
-        cout<<"Enter an integer::";
-        cin>>num;
-    }
-    int fact(int num)
-    {
-        if(num==0)
-            return 1;
-        return num*fact(num-1);
-    }
-    void display()
-    {
-        cout<<"Factorial="<<fact(num);
-    }
-};
-
-int main()
-{
-    Factorial f;
-    f.input();
-    f.display();
-    return 0;
+    cout<<"Enter an integer::";
+    cin>>num;
 }
+
+int Factorial::fact(int num)
+{
+    if(num==0)
+        return 1;
+    return num*fact(num-1);
+}
+
+void Factorial:: display()
+{
+    cout<<"Factorial="<<fact(num);
+}
+
+
+
