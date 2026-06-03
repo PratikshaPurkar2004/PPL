@@ -33,6 +33,5 @@ int ConsicutiveOnes::solve()
             cnt=0;
         }
     }
-    cout<<"max consecutive ones are:: "<<ans;
-    return 0;
+    return ans;
 }
