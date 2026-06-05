@@ -51,12 +51,12 @@ int main()
 {
     int n;
 
-    cout << "Enter size: ";
+    cout << "Enter size of array: ";
     cin >> n;
 
     vector<int> nums(n);
 
-    cout << "Enter array: ";
+    cout << "Enter array elements: ";
 
     for(int i = 0; i < n; i++)
         cin >> nums[i];
