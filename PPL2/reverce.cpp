@@ -4,20 +4,20 @@ using namespace std;
 class Reverse
 {
     private:
-        int n;
+        int num;
     public:
         void input()
         {
             cout<<"enter a num::";
-            cin>>n;
+            cin>>num;
         }
         int reverse()
         {
             int rev=0;
-            while(n>0)
+            while(num>0)
             {
-                rev=rev*10+n%10;
-                n=n/10;
+                rev=rev*10+num%10;
+                num=num/10;
             }
             cout<<"Reverse No is::"<<rev;
             return rev;
