@@ -31,7 +31,6 @@ int Prime::diagonalPrime()
     for(int i=0;i<n;i++)
         if(isPrime(nums[i][i]))
             maxPrime=max(maxPrime,nums[i][i]);
-    return maxPrime;
     for(int i=0;i<n;i++)
         if(isPrime(nums[i][n-i-1]))
             maxPrime=max(maxPrime,nums[i][n-i-1]);
