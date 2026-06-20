@@ -25,41 +25,6 @@ void Matrix::display()
 }
 
 
-void Matrix::reshape(int r,int c)
-{
-    if(rows * cols != r * c)
-    {
-        cout<<"Reshape not possible\n";
-        return;
-    }
-
-    vector<vector<int>> temp(r, vector<int>(c));
-
-    int a=0,b=0;
-
-    for(int i=0;i<rows;i++)
-    {
-        for(int j=0;j<cols;j++)
-        {
-            temp[a][b] = mat[i][j];
-
-            b++;
-
-            if(b==c)
-            {
-                a++;
-                b=0;
-            }
-        }
-    }
-
-    mat = temp;
-    rows = r;
-    cols = c;
-}
-
-
-
 // void Matrix::reshape(int r,int c)
 // {
 //     if(rows * cols != r * c)
@@ -70,12 +35,47 @@ void Matrix::reshape(int r,int c)
 
 //     vector<vector<int>> temp(r, vector<int>(c));
 
-//     for(int i=0;i<rows*cols;i++)
+//     int a=0,b=0;
+
+//     for(int i=0;i<rows;i++)
 //     {
-//         temp[i/c][i%c] = mat[i/cols][i%cols];
+//         for(int j=0;j<cols;j++)
+//         {
+//             temp[a][b] = mat[i][j];
+
+//             b++;
+
+//             if(b==c)
+//             {
+//                 a++;
+//                 b=0;
+//             }
+//         }
 //     }
 
 //     mat = temp;
 //     rows = r;
 //     cols = c;
 // }
+
+
+
+void Matrix::reshape(int r,int c)
+{
+    if(rows * cols != r * c)
+    {
+        cout<<"Reshape not possible\n";
+        return;
+    }
+
+    vector<vector<int>> temp(r, vector<int>(c));
+
+    for(int i=0;i<rows*cols;i++)
+    {
+        temp[i/c][i%c] = mat[i/cols][i%cols];
+    }
+
+    mat = temp;
+    rows = r;
+    cols = c;
+}
