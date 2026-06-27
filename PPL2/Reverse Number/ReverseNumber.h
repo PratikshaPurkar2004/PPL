@@ -1,7 +1,7 @@
 class ReverseNumber
 {
     private:
-        int x;
+        int num;
     public:
-        int reverse(int x);
+        int reverse(int num);
 };
