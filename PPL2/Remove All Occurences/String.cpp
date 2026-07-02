@@ -21,7 +21,7 @@ int main()
     getline(cin,str);
     cout<<"enter a part::";
     cin>>part;
-    String obj;
-    cout<<obj.removeOccurences( str, part);
+    String s;
+    cout<<s.removeOccurences( str, part);
     return 0;
 }
