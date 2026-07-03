@@ -11,14 +11,21 @@ void String::input()
     getline(cin,str);
 }
 
+// void String::reverseStr()
+// {
+//     int start=0, end=str.size()-1;
+//     while(start<end)
+//     {
+//         swap(str[start],str[end]);
+//         start++;
+//         end--;
+//     }
+//     cout<<str;
+// }
+
+
 void String::reverseStr()
 {
-    int start=0, end=str.size()-1;
-    while(start<end)
-    {
-        swap(str[start],str[end]);
-        start++;
-        end--;
-    }
+    reverse(str.begin(), str.end());
     cout<<str;
 }
