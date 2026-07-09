@@ -10,9 +10,14 @@ int Factorial::input()
 
 int Factorial::fact(int num)
 {
-    if(num==0)
-        return 1;
-    return num*fact(num-1);
+    // if(num==0)
+    //     return 1;
+    // return num*fact(num-1);
+
+    int f=1;
+    for(int i=1;i<=num;i++)
+        f*=i;
+    return f;
 }
 
 void Factorial:: display()
