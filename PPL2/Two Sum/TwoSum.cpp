@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<unordered_map>
 #include "TwoSum.h"
 using namespace std;
 
@@ -18,17 +19,30 @@ void TwoSum::input()
 
 int TwoSum::solve()
 {
-    for(int i=0;i<n;i++)
+    // for(int i=0;i<n;i++)
+    // {
+    //     for(int j=i+1;j<n;j++)
+    //     {
+    //         if(arr[i]+arr[j]==target)
+    //         {
+    //             // ans.push_back(i);
+    //             // ans.push_back(j);
+    //             cout<<i  <<" " <<j;
+    //         }
+    //     }
+    // }
+    //  return 0;
+
+    unordered_map<int,int>map;
+    for(int i=0;i<arr.size();i++)
     {
-        for(int j=i+1;j<n;j++)
+        int diff=target-arr[i];
+        if(map.find(diff)!=map.end())
         {
-            if(arr[i]+arr[j]==target)
-            {
-                // ans.push_back(i);
-                // ans.push_back(j);
-                cout<<i  <<" " <<j;
-            }
+            cout<<map[diff]<<" "<<i;
+            return 0;
         }
+        map[arr[i]]=i;
     }
-     return 0;
+
 }
