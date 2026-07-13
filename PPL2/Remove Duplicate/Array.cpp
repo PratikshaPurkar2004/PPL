@@ -19,15 +19,27 @@ class Solution
 
         void removeDuplicate()
         {
-            unordered_set<int>s;
-            for(int i=0;i<arr.size();i++)
+            // unordered_set<int>s;
+            // for(int i=0;i<arr.size();i++)
+            // {
+            //     if(s.find(arr[i])==s.end())
+            //     {
+            //         cout<<arr[i]<<" ";
+            //         s.insert(arr[i]);
+            //     }
+            // }
+
+            int j=0;
+            for(int i=1;i<arr.size();i++)
             {
-                if(s.find(arr[i])==s.end())
+                if(arr[i]!=arr[j])
                 {
-                    cout<<arr[i]<<" ";
-                    s.insert(arr[i]);
+                    j++;
+                    arr[j]=arr[i];
                 }
             }
+            for(int i=0;i<=j;i++)
+                cout<<arr[i] <<" ";
         }
 };
 
