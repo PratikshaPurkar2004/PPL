@@ -18,7 +18,8 @@ int main()
             ans[i]=i-stk.top();
         stk.push(i);
     }
-    for(int i=0;i<ans.size();i++)//for(int val:ans) cout<<val<<" ";
-        cout<<ans[i]<<" ";
+    //for(int i=0;i<ans.size();i++)
+    for(int val:ans) cout<<val<<" ";
+        //cout<<ans[i]<<" ";
     return 0;
 }
