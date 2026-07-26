@@ -2,7 +2,8 @@
 #include<vector>
 using namespace std;
 
-class Solution {
+class Solution 
+{
     vector<string> str;
     public:
         void input()
@@ -39,6 +40,6 @@ int main()
     cin.ignore();
     for(int i=0;i<n;i++)
         s.input();
-    cout<<"Longest Common Prefix: "<<s.longestCommonPrefix();
+    cout<<s.longestCommonPrefix();
     return 0;
 }
