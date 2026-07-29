@@ -22,6 +22,6 @@ int main()
     cout<<"enter a part::";
     cin>>part;
     String s;
-    cout<<s.removeOccurences( str, part);
+    cout<<s.removeOccurences(str, part);
     return 0;
 }
