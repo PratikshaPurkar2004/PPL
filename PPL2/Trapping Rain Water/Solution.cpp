@@ -36,8 +36,7 @@ class Solution
                     right--;
                 }
             }
-            cout<<water;
-            return 0;
+            return water;
         }
 };
 
@@ -46,6 +45,6 @@ int main()
 {
     Solution s;
     s.input();
-    s.trap();
+    cout<<s.trap()<<endl;
     return 0;
 }
